@@ -1,4 +1,4 @@
-import Hero from "/Users/macbook/Desktop/Nike/src/sections/Hero.jsx";
+import Hero from "../sections/Hero";
 import CustomerReviews from "../sections/CustomerReviews";
 import Footer from "../sections/Footer";
 import PopularProducts from "../sections/PopularProducts";
