@@ -40,7 +40,7 @@ const Nav = () => {
                         height={29}
                     />
                 </a>
-                {isMobile ? (
+                {isMobile && (
                     <div className="max-lg:hidden">
                         <img
                             src={hamburger}
@@ -51,38 +51,23 @@ const Nav = () => {
                             style={{ cursor: 'pointer' }}
                         />
                     </div>
-                ) : (
-                    <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
-                        {navLinks.map((item) => (
-                            <li key={item.label} >
-                                <a
-                                    href={item.href}
-                                    className="font-monts errat leading-normal text-lg text-slate-gray"
-                                >
-                                    {item.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
                 )}
-                {isMobile && (
-                    <ul className={`flex-1 flex justify-center items-center gap-16 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-                        {navLinks.map((item) => (
-                            <li key={item.label} >
-                                <a
-                                    href={item.href}
-                                    className="font-monts errat leading-normal text-lg text-slate-gray"
-                                    onClick={toggleMobileMenu}
-                                >
-                                    {item.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                )}
+                <ul className={`flex-1 flex justify-center items-center gap-16 max-lg:hidden ${isMobile && isMobileMenuOpen ? 'block' : 'hidden'}`}>
+                    {navLinks.map((item) => (
+                        <li key={item.label}>
+                            <a
+                                href={item.href}
+                                className="font-monts errat leading-normal text-lg text-slate-gray"
+                                onClick={toggleMobileMenu}
+                            >
+                                {item.label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </nav>
         </header>
     );
-}
+};
 
 export default Nav;
