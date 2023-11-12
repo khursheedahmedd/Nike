@@ -66,12 +66,13 @@ const Nav = () => {
                     </ul>
                 )}
                 {isMobile && (
-                    <ul className={`flex-1 flex justify-center items-center gap-16 max-lg:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+                    <ul className={`flex-1 flex justify-center items-center gap-16 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
                         {navLinks.map((item) => (
                             <li key={item.label} >
                                 <a
                                     href={item.href}
                                     className="font-monts errat leading-normal text-lg text-slate-gray"
+                                    onClick={toggleMobileMenu}
                                 >
                                     {item.label}
                                 </a>
