@@ -42,14 +42,14 @@ const Nav = () => {
                 </a>
                 {isMobile ? (
                     <div className="max-lg:hidden">
-                        <img
+                        {/* <img
                             src={hamburger}
                             alt="hamburger"
                             width={25}
                             height={25}
                             onClick={toggleMobileMenu}
                             style={{ cursor: 'pointer' }}
-                        />
+                        /> */}
                     </div>
                 ) : (
                     <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
